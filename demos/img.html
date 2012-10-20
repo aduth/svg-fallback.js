@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>svg-fallback.js Demo - &lt;IMG&gt;</title>
+    </head>
+    <body>
+        <h3>&lt;IMG&gt; Demonstration</h3>
+        <p>The circle below will be rendered using a <em>.svg</em> image if your browser supports SVG. If not supported, it will use a traditional <em>.png</em> image. View the page source to see how this is done using the &lt;img&gt; "data-svg-src" and "data-nosvg-src" attributes.</p>
+
+        <img data-svg-src="img/circle.svg" data-nosvg-src="img/circle.png" alt="Circle" />
+        <noscript>
+            <img src="img/circle.png" alt="Circle" />
+        </noscript>
+
+        <script src="../svg-fallback.js"></script>
+    </body>
+</html>
