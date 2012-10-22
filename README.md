@@ -4,7 +4,7 @@ __svg-fallback.js__ provides an unobtrusive fallback for browsers which lack sup
 
 No additional scripts are required. Simply include _svg-fallback.js_, and use either the CSS class or the &lt;img&gt; data-* attributes as outlined below.
 
-_svg-fallback.js_ is only __425 bytes__ when gzipped.
+_svg-fallback.js_ is only __427 bytes__ when minified and gzipped.
 
 ## Demos
 
