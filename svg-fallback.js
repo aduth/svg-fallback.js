@@ -1,5 +1,5 @@
 ﻿/* svg-fallback.js | Copyright (C) 2012 Andrew Duthie | MIT license */
-(function(window) {
+(function(window, document) {
     'use strict';
 
     var supportsSVG = !!document.createElementNS && ('createSVGRect' in document.createElementNS('http://www.w3.org/2000/svg', 'svg')),
@@ -35,4 +35,4 @@
     } else {
         window.onload = onload;
     }
-}(this));
+}(this, this.document));
