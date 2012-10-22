@@ -6,8 +6,12 @@
         docImgs;
 
     window.SVGFallback = {
+        setSupport: function() {
+            document.documentElement.className += ' ' + (supportsSVG ? 'svg' : 'no-svg');        
+        },
+        
         setImgSrc: function () {
-            if (typeof docImgs === 'undefined') { return; }
+            docImgs = docImgs || document.getElementsByTagName('img');
 
             for (var i = 0, dl = docImgs.length; i < dl; i++) {
                 var img = docImgs[i],
@@ -20,8 +24,7 @@
     };
 
     function onload() {
-        document.documentElement.className += ' ' + (supportsSVG ? 'svg' : 'no-svg');
-        docImgs = document.getElementsByTagName('img');
+        window.SVGFallback.setSupport();
         window.SVGFallback.setImgSrc();
     }
 
