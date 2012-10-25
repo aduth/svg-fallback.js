@@ -7,7 +7,7 @@
 
     window.SVGFallback = {
         setSupport: function() {
-            document.documentElement.className += ' ' + (supportsSVG ? 'svg' : 'no-svg');        
+            document.documentElement.className += ' ' + (supportsSVG ? 'svg' : 'no-svg');
         },
         
         setImgSrc: function () {
