@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>svg-fallback.js Demo</title>
+
+    <link rel="stylesheet" href="css/prettify.css">
+    <link rel="stylesheet" href="css/docs.css">
+
+    <style type="text/css">
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .svg .circle {
+            background-image: url('img/circle.svg');
+        }
+
+        .no-svg .circle {
+            background-image: url('img/circle.png');
+        }
+    </style>
+</head>
+<body onload="prettyPrint()">
+
+<h1 class="headline">svg-fallback.js Demo</h1>
+
+<div class="example clearfix">
+    <div class="label">
+        <h2>Usage</h2>
+    </div>
+    <div class="body">
+        <label>CSS</label>
+        <p>svg-fallback.js adds a CSS class to the root &lt;html&gt; tag to indicate support for SVG ("svg" if supported, or "no-svg" if not)*. Therefore, set your background-image in a subclass of the corresponding context.</p>
+        <pre class="prettyprint">
+&lt;style type="text/css"&gt;
+    .circle {
+        width: 100px;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .svg .circle {
+        background-image: url('img/circle.svg');
+    }
+
+    .no-svg .circle {
+        background-image: url('img/circle.png');
+    }
+&lt;/style&gt;</pre>
+        <div class="aside">* This is identical to how Modernizr shows support for modern web features. In fact, if at any point you decide to use Modernizr instead, this technique will continue to work without needing any changes.</div>
+        <label>&lt;img&gt;</label>
+        <p>svg-fallback.js uses data attributes to appropriately assign an image's source. This is to prevent multiple HTTP requests being made to your server (one which would load the original source, then another if a fallback is needed). In order to support browsers where javascript is disabled, you will want to include an additional &lt;img&gt; inside a &lt;noscript&gt; tag.</p>
+        <pre class="prettyprint">
+&lt;img data-svg-src="img/circle.svg" data-nosvg-src="img/circle.png" alt="Circle" /&gt;
+&lt;noscript&gt;
+    &lt;img src="img/circle.png" alt="Circle" /&gt;
+&lt;/noscript&gt;</pre>
+        <div class="aside"><strong>Note:</strong> Make sure you do not set the standard src attribute to empty, i.e. &lt;img src=""&gt; (<a href="http://www.nczonline.net/blog/2009/11/30/empty-image-src-can-destroy-your-site/">see here for why</a>).</div>
+    </div>
+</div>
+
+<div class="example clearfix">
+    <div class="label">
+        <h2>Demo</h2>
+        <p>Both examples below should display a green circle, regardless of the browser being used.</p>
+    </div>
+    <div class="body">
+        <label>CSS</label>
+        <div class="circle"></div>
+        <label>&lt;img&gt;</label>
+        <div>
+            <img data-svg-src="img/circle.svg" data-nosvg-src="img/circle.png" alt="Circle" />
+            <noscript>
+                <img src="img/circle.png" alt="Circle" />
+            </noscript>
+        </div>
+    </div>
+</div>
+
+<p class="github-info">
+    Copyright &copy; 2013 Andrew Duthie<br>
+    For project and license information, visit the <a href="https://github.com/aduth/jquery.optgrouper/">GitHub repository</a>
+</p>
+
+<script src="js/prettify.js"></script>
+<script src="js/svg-fallback.js"></script>
+</body>
+</html>
