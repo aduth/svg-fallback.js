@@ -6,14 +6,7 @@ No additional scripts are required. Simply include _svg-fallback.js_, and use ei
 
 _svg-fallback.js_ is only __427 bytes__ when minified and gzipped.
 
-## Demos
-
-To get a better idea of how to use the script, and the benefit it provides, take a look at the demos below:
-
-* [CSS _background-image_](http://home.fuse.net/andrewd/svg-fallback.js/demos/css.html)
-* [&lt;img&gt; _data-*_ attributes](http://home.fuse.net/andrewd/svg-fallback.js/demos/img.html)
-
-Be sure to take a glance at the page source. Try it in a modern browser, as well as older versions of Internet Explorer (where SVG is not supported).
+[Demonstration](http://aduth.github.com/svg-fallback.js/)
 
 ## Usage
 
