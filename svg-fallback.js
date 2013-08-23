@@ -1,4 +1,4 @@
-﻿/* svg-fallback.js | Copyright (C) 2012 Andrew Duthie | MIT license */
+/*! svg-fallback.js 1.0.1 | (c) 2013 Andrew Duthie | MIT License */
 (function(window, document) {
     'use strict';
 
