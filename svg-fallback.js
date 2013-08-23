@@ -9,7 +9,7 @@
         setSupport: function() {
             document.documentElement.className += ' ' + (supportsSVG ? 'svg' : 'no-svg');
         },
-        
+
         setImgSrc: function () {
             docImgs = docImgs || document.getElementsByTagName('img');
 
@@ -18,7 +18,7 @@
                     src = img.getAttribute('data-svg-src'),
                     fallbackSrc = img.getAttribute('data-nosvg-src');
 
-                img.src = (supportsSVG && src) ? src : ((!supportsSVG && fallbackSrc) ? fallbackSrc : '');
+                img.src = (supportsSVG && src) ? src : ((!supportsSVG && fallbackSrc) ? fallbackSrc : img.src);
             }
         }
     };
