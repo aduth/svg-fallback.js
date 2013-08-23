@@ -1,0 +1,15 @@
+{
+  "name": "svg-fallback.js",
+  "version": "1.0.1",
+  "description": "Provides an unobtrusive fallback for browsers which lack support for SVG images",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aduth/svg-fallback.js.git"
+  },
+  "author": {
+    "name": "Andrew Duthie",
+    "email": "aduthie7@gmail.com",
+    "url": "http://www.andrewduthie.com/"
+  },
+  "license": "MIT"
+}
