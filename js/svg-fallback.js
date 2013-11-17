@@ -1,4 +1,4 @@
-﻿/* svg-fallback.js | Copyright (C) 2012 Andrew Duthie | MIT license */
+/*! svg-fallback.js 1.0.2 | (c) 2013 Andrew Duthie | MIT License */
 (function(window, document) {
     'use strict';
 
@@ -9,17 +9,29 @@
         setSupport: function() {
             document.documentElement.className += ' ' + (supportsSVG ? 'svg' : 'no-svg');
         },
-        
-        setImgSrc: function () {
-            docImgs = docImgs || document.getElementsByTagName('img');
+
+        setImgSrc: function() {
+            docImgs = this.findImages();
 
             for (var i = 0, dl = docImgs.length; i < dl; i++) {
                 var img = docImgs[i],
                     src = img.getAttribute('data-svg-src'),
                     fallbackSrc = img.getAttribute('data-nosvg-src');
 
-                img.src = (supportsSVG && src) ? src : ((!supportsSVG && fallbackSrc) ? fallbackSrc : '');
+                img.src = (supportsSVG && src) ? src : ((!supportsSVG && fallbackSrc) ? fallbackSrc : img.src);
             }
+        },
+
+        findImages: function() {
+            if (typeof docImgs === 'undefined') {
+                if ('querySelectorAll' in document) {
+                    docImgs = document.querySelectorAll('img[data-svg-src],img[data-nosvg-src]');
+                } else {
+                    docImgs = document.getElementsByTagName('img');
+                }
+            }
+
+            return docImgs;
         }
     };
 
