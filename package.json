@@ -1,6 +1,6 @@
 {
   "name": "svg-fallback.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provides an unobtrusive fallback for browsers which lack support for SVG images",
   "repository": {
     "type": "git",

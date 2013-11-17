@@ -1,10 +1,10 @@
 # svg-fallback.js
 
-__svg-fallback.js__ provides an unobtrusive fallback for browsers which lack support for SVG images. It supports images rendered either through &lt;img&gt; tags or through CSS background-image. Even better, it can do so without making multiple HTTP requests.
+__svg-fallback.js__ provides an unobtrusive fallback for browsers which lack support for SVG images. It supports images rendered either through &lt;img&gt; tags or using CSS background-image. Even better, it can do so without making multiple HTTP requests.
 
 No additional scripts are required. Simply include _svg-fallback.js_, and use either the CSS class or the &lt;img&gt; data-* attributes as outlined below.
 
-_svg-fallback.js_ is only __427 bytes__ when minified and gzipped.
+_svg-fallback.js_ is less than __1kb__ minified.
 
 [Demonstration](http://aduth.github.com/svg-fallback.js/)
 
